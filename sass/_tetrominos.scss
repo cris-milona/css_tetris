@@ -1,0 +1,28 @@
+.tetrominos {
+  grid-template-columns: repeat(2, 1fr);
+
+  padding: var(--pad-block-small) var(--pad-inline-small);
+
+  background-color: var(--color-primary-light);
+
+  &__img-box {
+    width: clamp(8rem, 20%, 25rem);
+    aspect-ratio: 1;
+    margin: 0 auto;
+
+    & img {
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .tetrominos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 55em) {
+  .tetrominos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,244 @@
+/* Import fonts */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-Italic.ttf');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-BoldItalic.ttf');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-LightItalic.ttf');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-ExtraLight.ttf');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-ExtraLightItalic.ttf');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-MediumItalic.ttf');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../assets/fonts/Raleway-SemiBoldItalic.ttf');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Color CSS variables */
+  --color-primary-light: #acada7;
+  --color-primary-dark: #2c2c24;
+  --color-secondary: #9eac84;
+  --color-bg: #efede9;
+  --color-grey: #808080;
+  --color-white: #ffffff;
+  --color-black: #000;
+
+  --color-tetris-orange: #e77d31;
+  --color-tetris-purple: #8c47ad;
+  --color-tetris-green: #2dae62;
+  --color-tetris-blue: #2f81b7;
+  --color-tetris-yellow: #f1c331;
+  --color-tetris-red: #e64c43;
+  --color-tetris-brown: #996633;
+
+  /* Font CSS variables */
+  --ff: 'Raleway', sans-serif;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Padding CSS variables*/
+  --pad-inline-small: 3.5%;
+  --pad-inline-medium: 7.5%;
+  --pad-inline-large: 11.5%;
+  --pad-block-small: 4rem;
+  --pad-block-medium: 8rem;
+  --pad-block-large: 12rem;
+}
+
+/*  Media queries breakpoints: 
+    breakpoint at 640px: 40em
+    breakpoint at 820px: 51.25em
+    breakpoint at 880px: 55em
+    breakpoint at 1240px: 77.55em
+    breakpoint at 1600px: 100em  */
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* set root font-size to 10px */
+  scroll-behavior: smooth;
+}
+
+/* Typography */
+body {
+  font-family: var(--ff);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: black;
+
+  background-color: var(--color-primary-light);
+
+  //this is prevent overflow from the navbar when it is hidden
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: black;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* General classes for webpage functionality */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+.sr-only {
+  visibility: hidden;
+}
+
+//basic button
+.btn {
+  position: relative;
+  padding: 1em 3em;
+
+  border: none;
+  border-radius: 0.12em;
+
+  font-size: inherit;
+
+  text-align: center;
+  cursor: pointer;
+
+  transition: all 0.25s;
+
+  &::after {
+    content: '\2192';
+    position: absolute;
+    top: 0.2em;
+    right: 0.6em;
+
+    font-size: 1.8em;
+    color: currentColor;
+    opacity: 0;
+    transition: transform 0.25s ease-in, opacity 0.25s ease;
+  }
+
+  &:hover,
+  &:focus {
+    padding-right: 4.5em;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

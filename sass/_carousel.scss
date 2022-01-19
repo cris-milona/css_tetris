@@ -1,0 +1,59 @@
+.carousel {
+  padding: var(--pad-block-small) var(--pad-inline-small);
+
+  background-color: var(--color-bg);
+
+  overflow-x: hidden;
+
+  &__details {
+    display: grid;
+    grid-template-areas:
+      'title'
+      'text'
+      'arrows';
+    row-gap: 2rem;
+    align-items: center;
+
+    margin-bottom: 2rem;
+  }
+  &__heading {
+    grid-area: title;
+    font-size: 2.8rem;
+    color: var(--color-primary-dark);
+  }
+  &__text {
+  }
+  &__arrow-box {
+    grid-area: arrows;
+    justify-self: end;
+
+    display: flex;
+    gap: 1rem;
+
+    & img:first-of-type {
+      transform: rotateY(180deg);
+    }
+
+    & img {
+      width: 4rem;
+      aspect-ratio: 1;
+      padding: 0.2rem;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.swiper {
+  cursor: grabbing;
+}
+
+.slide-box {
+  &__image-box {
+    height: 30rem;
+  }
+  &__heading {
+  }
+  &__link {
+  }
+}

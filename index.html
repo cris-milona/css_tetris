@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Static one page website about tetris" />
+    <meta
+      name="keywords"
+      content="junior web developer, portfolio, Milona Christina"
+    />
+    <meta
+      name="title"
+      property="og:title"
+      content="Milonas Christina portfolio - tetris static webpage"
+    />
+    <meta property="og:type" content="web page" />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://i.imgur.com/0iwu8M8.png"
+    />
+    <meta
+      name="description"
+      property="og:description"
+      content="Static one-page website about tetris"
+    />
+    <meta name="author" content="Milona Christina" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+      integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/animation.js" defer></script>
+    <title>Tetris</title>
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header flex">
+      <div class="header__logo-box">
+        <img
+          src="assets/images/tetris-logo.png"
+          alt="tetris logo"
+          class="header__logo"
+        />
+      </div>
+      <button
+        class="header__menu-open"
+        aria-controls="navigation"
+        aria-expanded="false"
+        data-menu-hamburger
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav>
+        <ul
+          id="navigation"
+          class="navbar flex"
+          data-visible="false"
+          data-nav-ul
+        >
+          <li>
+            <a href="#"><span aria-hidden="true">01</span>The&nbsp;Game</a>
+          </li>
+          <li>
+            <a href="#"><span aria-hidden="true">02</span>Tetrominos</a>
+          </li>
+          <li>
+            <a href="#"><span aria-hidden="true">03</span>The&nbsp;History</a>
+          </li>
+          <li>
+            <a href="#"><span aria-hidden="true">04</span>The&nbsp;Future</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main  -->
+    <main class="main">
+      <!-- hero section  -->
+      <section class="hero">
+        <div class="hero__final" id="end">
+          <h1 class="final__heading">Welcome&nbsp;to</h1>
+          <img
+            class="final__img"
+            src="assets/images/tetris_hero.png"
+            alt="tetris word formated out of small blocks"
+          />
+          <h2 class="final__heading">world</h2>
+          <button class="btn hero__btn">Discover</button>
+        </div>
+        <div class="hero__starting" id="start">
+          <h2>
+            <span id="starting__text"> If tetris has tought me anything</span>
+          </h2>
+          <h2><span id="starting__text">it's that errors pile up</span></h2>
+          <h2>
+            <span id="starting__text">and accomplishments disappear</span>
+          </h2>
+        </div>
+      </section>
+      <!-- details section  -->
+      <section class="details flex">
+        <div class="details__image-box">
+          <img
+            class="out"
+            src="assets/images/tetris-details.png"
+            alt="tetris image"
+            data-slide-on-scroll
+          />
+        </div>
+        <div class="details__content-box">
+          <h2 class="content-box__heading">Life is like tetris..</h2>
+          <p class="content-box__text">
+            Tetris (Russian: Тéтрис) is a puzzle video game created by Soviet
+            software engineer Alexey Pajitnov in 1984. It has been published by
+            several companies for multiple platforms, most prominently during a
+            dispute over the appropriation of the rights in the late 1980s.
+            After a significant period of publication by Nintendo, the rights
+            reverted to Pajitnov in 1996, who co-founded The Tetris Company with
+            Henk Rogers to manage licensing. In Tetris, players complete lines
+            by moving differently shaped pieces (tetrominoes), which descend
+            onto the playing field. The completed lines disappear and grant the
+            player points, and the player can proceed to fill the vacated
+            spaces. The game ends when the playing field is filled. The longer
+            the player can delay this outcome, the higher their score will be.
+            In multiplayer games, players must last longer than their opponents;
+            in certain versions, players can inflict penalties on opponents by
+            completing a significant number of lines.
+          </p>
+          <a href="#" class="details__more">Learn more</a>
+        </div>
+      </section>
+      <!-- tetrominos section  -->
+      <seciton class="tetrominos grid">
+        <div class="tetrominos__img-box tetrominos__img-box--1">
+          <img src="assets/icons/block_1.svg" alt="tetromino" />
+        </div>
+        <div class="tetrominos__img-box tetrominos__img-box--2">
+          <img src="assets/icons/block_2.svg" alt="tetromino" />
+        </div>
+        <div class="tetrominos__img-box tetrominos__img-box--3">
+          <img src="assets/icons/block_3.svg" alt="tetromino" />
+        </div>
+        <div class="tetrominos__img-box tetrominos__img-box--4">
+          <img src="assets/icons/block_4.svg" alt="tetromino" />
+        </div>
+        <div class="tetrominos__img-box tetrominos__img-box--5">
+          <img src="assets/icons/block_5.svg" alt="tetromino" />
+        </div>
+        <div class="tetrominos__img-box tetrominos__img-box--6">
+          <img src="assets/icons/block_6.svg" alt="tetromino" />
+        </div>
+        <div class="tetrominos__img-box tetrominos__img-box--7">
+          <img src="assets/icons/block_7.svg" alt="tetromino" />
+        </div>
+      </seciton>
+      <!-- carousel section  -->
+      <section class="carousel">
+        <div class="carousel__details">
+          <h2 class="carousel__heading">Tetris evolving over the years</h2>
+          <p class="carousel__text">
+            It is a universal thing that happens with all art and artists.
+            Someone makes something for people, and it becomes popular. Once it
+            goes out into the world, it can be redefined by other people and
+            become something else entirely.
+          </p>
+          <div class="carousel__arrow-box">
+            <img
+              src="assets/icons/arrow_nav.svg"
+              id="swiper-button-prev-unique"
+              role="image"
+              alt="arrow previous icon"
+            />
+
+            <img
+              src="assets/icons/arrow_nav.svg"
+              id="swiper-button-next-unique"
+              role="image"
+              alt="arrow next icon"
+            />
+          </div>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-box slide-box--1" data-slidebox>
+                <div class="slide-box__image-box">
+                  <img
+                    class="slide-box__img"
+                    src="assets/images/Tetris-VeryFirstVersion_1984.png"
+                    alt="tetris screen from 1984"
+                  />
+                </div>
+                <h3 class="slide-box__heading">1984</h3>
+                <a class="slide-box__link" href="#">See more</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-box slide-box--1" data-slidebox>
+                <div class="slide-box__image-box">
+                  <img
+                    class="slide-box__img"
+                    src="assets/images/Tetris_DOS_1986.png"
+                    alt="tetris screen from 1984"
+                  />
+                </div>
+                <h3 class="slide-box__heading">1986</h3>
+                <a class="slide-box__link" href="#">See more</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-box slide-box--1" data-slidebox>
+                <div class="slide-box__image-box">
+                  <img
+                    class="slide-box__img"
+                    src="assets/images/Tetris_NES_play_1989.png"
+                    alt="tetris screen from 1989"
+                  />
+                </div>
+                <h3 class="slide-box__heading">1989</h3>
+                <a class="slide-box__link" href="#">See more</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-box slide-box--1" data-slidebox>
+                <div class="slide-box__image-box">
+                  <img
+                    class="slide-box__img"
+                    src="assets/images/ARC_Tetris_Plus_1997.png"
+                    alt="tetris screen from 1997"
+                  />
+                </div>
+                <h3 class="slide-box__heading">1997</h3>
+                <a class="slide-box__link" href="#">See more</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-box slide-box--1" data-slidebox>
+                <div class="slide-box__image-box">
+                  <img
+                    class="slide-box__img"
+                    src="assets/images/Tetris_DS_gameplay_2006.png"
+                    alt="tetris screen from 2006"
+                  />
+                </div>
+                <h3 class="slide-box__heading">2006</h3>
+                <a class="slide-box__link" href="#">See more</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-box slide-box--1" data-slidebox>
+                <div class="slide-box__image-box">
+                  <img
+                    class="slide-box__img"
+                    src="assets/images/Tetris_Effect_Gameplay_2020.png"
+                    alt="tetris screen from 2020"
+                  />
+                </div>
+                <h3 class="slide-box__heading">2020</h3>
+                <a class="slide-box__link" href="#">See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- features section  -->
+      <section class="features">
+        <img
+          src="assets/images/tetris-features.png"
+          alt="game boys in different colors"
+        />
+      </section>
+    </main>
+    <!-- footer  -->
+    <footer class="footer grid">
+      <div class="footer__logo-box">
+        <img
+          src="assets/icons/tetris-logo.svg"
+          alt="tetris logo in white colors"
+        />
+      </div>
+      <div class="footer__info">
+        <h2>Useful info</h2>
+        <ul>
+          <li><a href="#">Rules of the game</a></li>
+          <li><a href="#">The life lessons of tetris</a></li>
+          <li><a href="#">Weird information</a></li>
+          <li><a href="#">List of tetris games</a></li>
+        </ul>
+      </div>
+      <div class="footer__about">
+        <h2>What to do</h2>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h2>Contact us</h2>
+        <ul>
+          <li><a href="#">Milky way</a></li>
+          <li><a href="#">Tetris Galaxy</a></li>
+          <li><a href="#">Planet tetris</a></li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h2>Follow us</h2>
+        <svg>
+          <use href="assets/sprite/sprite.svg#fb"></use>
+        </svg>
+        <svg>
+          <use href="assets/sprite/sprite.svg#ig"></use>
+        </svg>
+        <svg>
+          <use href="assets/sprite/sprite.svg#yt"></use>
+        </svg>
+      </div>
+      <svg class="back-to-top">
+        <use href="assets/sprite/sprite.svg#back_to_top_arrow"></use>
+      </svg>
+    </footer>
+  </body>
+</html>

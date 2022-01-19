@@ -1,0 +1,86 @@
+.hero {
+  padding-block: var(--pad-block-small);
+
+  &__final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-primary-light);
+
+    & h1,
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  &__starting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    inset: 0;
+
+    background-image: url('../assets/images/tetris-intro.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: start;
+    background-color: var(--color-black);
+
+    padding-top: var(--pad-block-medium);
+
+    & h2 {
+      font-weight: var(--fw-medium);
+      line-height: 3rem;
+      color: var(--color-white);
+      margin-left: var(--pad-inline-small);
+
+      text-transform: capitalize;
+      overflow: hidden;
+    }
+    & h2 span {
+      display: inline-block;
+
+      transform: translateY(100%);
+    }
+  }
+
+  &__btn {
+    background-color: var(--color-tetris-blue);
+    margin: var(--pad-block-small);
+  }
+}
+
+.final {
+  &__heading {
+    padding: var(--pad-inline-medium);
+  }
+  &__img {
+    padding: var(--pad-inline-medium);
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .hero {
+    padding-top: var(--pad-block-small);
+  }
+
+  .final {
+    &__heading {
+      padding: var(--pad-inline-small);
+    }
+    &__img {
+      padding: var(--pad-inline-small);
+    }
+  }
+}
+
+@media screen and (min-width: 55em) {
+  .hero__starting {
+    justify-content: start;
+    background-size: cover;
+  }
+}

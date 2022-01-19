@@ -1,0 +1,120 @@
+.footer {
+  grid-template-areas:
+    'logo'
+    'info'
+    'about'
+    'contact'
+    'social';
+
+  justify-content: center;
+  row-gap: 4rem;
+
+  position: relative;
+
+  padding: var(--pad-block-small) var(--pad-inline-small);
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+
+  text-align: center;
+
+  &__logo-box {
+    grid-area: logo;
+    width: 17rem;
+    margin: 0 auto;
+  }
+
+  &__info {
+    grid-area: info;
+  }
+
+  &__about {
+    grid-area: about;
+  }
+
+  &__contact {
+    grid-area: contact;
+  }
+
+  &__social {
+    grid-area: social;
+
+    text-align: center;
+
+    svg {
+      width: 3rem;
+      aspect-ratio: 1;
+      margin-top: 2rem;
+
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  & ul li a {
+    color: var(--color-white);
+  }
+}
+
+.back-to-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 4rem;
+  aspect-ratio: 1;
+  padding: 1rem;
+  background-color: var(--color-primary-dark);
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+@media screen and (min-width: 35em) {
+  .footer {
+    grid-template-areas:
+      '. logo . '
+      'info about contact'
+      '. social .';
+
+    padding: var(--pad-block-medium) var(--pad-inline-medium);
+
+    &__logo-box {
+      max-width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 51.25em) {
+  .back-to-top {
+    width: 5rem;
+  }
+}
+
+@media screen and (min-width: 77.55em) {
+  .footer {
+    grid-template-areas: 'logo info about contact social';
+    justify-content: space-between;
+
+    text-align: left;
+
+    &__logo-box {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .footer {
+    padding: var(--pad-block-large) var(--pad-inline-large);
+  }
+
+  .back-to-top {
+    width: 6rem;
+  }
+}
